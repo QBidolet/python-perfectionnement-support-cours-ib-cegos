@@ -1,0 +1,30 @@
+Enoncé court :
+Créer une application pour gérer des utilisateurs et leurs messages.
+Vous devez utiliser des context managers pour gérer les ressources,
+des métaclasses pour contrôler la création d'instances d'utilisateurs,
+des fonctions internes et des closures pour la validation des messages.
+
+Facultatif :
+Gestion de la concurrence pour permettre un accès simultané de plusieurs users à la base de données
+Tests unitaires
+Packaging et la distribution de l'application
+
+Enoncé détaillé :
+1/ Créez une base de données SQLite avec deux tables : users et messages.
+Utilisez un context manager pour gérer la connexion et effectuer les opérations CRUD.
+
+2/ Implémentez une métaclass pour valider les attributs des utilisateurs (par exemple, vérifier que l'âge est supérieur à 0) lors de la création d'un utilisateur.
+Utilisez cette métaclasse pour définir une classe User avec des attributs id, name et age.
+
+3/ Implémentez une classe Message avec des attributs id, user_id et text.
+Ajoutez une fonction interne pour vérifier que le message n'est pas vide et qu'il ne dépasse pas une certaine longueur (par exemple, 140 caractères).
+Utilisez une closure pour encapsuler la logique de validation et la longueur maximale du message.
+
+4/ Créez des fonctions CRUD pour les utilisateurs et les messages.
+
+5/ Facultatif: Ajoutez une gestion de la concurrence pour permettre à plusieurs utilisateurs d'accéder et de modifier la base de données simultanément.
+
+6/ Facultatif : Packagez l'application avec setuptools dans un fichier setup.py.
+
+7 / Facultatif: Implémentez des tests unitaires pour l'application à l'aide de pytest.
+Testez les fonctions CRUD, la validation des attributs des utilisateurs et des messages, et la concurrence.
